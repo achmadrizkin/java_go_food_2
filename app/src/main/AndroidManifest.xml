@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.java_go_food_clone">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Java_go_food_clone"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustPan">
+        <activity
+            android:name=".view.bottomNav.food_details.edit_food.EditFoodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.orders.make_qr_code.MakeQrCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.orders.latest_order_dropshipper.LatestOrderDropshipper"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.orders.latest_order.LatestOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.food_details.pay_details.payment_success.PaymentSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.food_details.pay_details.maps.MapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.food_details.pay_details.searchCity.SearchCityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.food_details.pay_details.PayDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.user.admin_only.PaymentValidationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.user.account.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.user.account.CheckPromoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.user.account.QrDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.food_details.make_qr.MakeQrActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.user.admin_only.InsertPromoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.user.admin_only.InsertFoodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.food_details.FoodDetailsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.achmadrizkin.my.id"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.achmadrizkin.my.id"
+                    android:scheme="app" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.achmadrizkin.my.id"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.bottomNav.BottomNav"
+            android:exported="false" />
+        <activity
+            android:name=".view.sign_up.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.auth.AuthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.splash_screen.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
